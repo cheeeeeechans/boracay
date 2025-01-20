@@ -20,6 +20,9 @@
 
   #ww_c44914d4dc50c, #ww_918d49777123f {
     width: 100%;     /* 幅を100%に統一 */
+    display: flex;
+    justify-content: center;  /* 水平中央揃え */
+    align-items: center;  /* 垂直中央揃え */
   }
 
   /* 1つ目のウィジェットの幅を最適化 */
@@ -33,13 +36,12 @@
   /* 2つ目のウィジェットの幅を300pxに設定 */
   #ww_918d49777123f {
     width: 300px;  /* 固定幅の設定 */
-    margin: auto;  /* 中央寄せ */
   }
 
   /* 2つ目のレスポンシブ対応 */
   @media (max-width: 600px) {
     #ww_918d49777123f {
-      width: 60%;  /* モバイル対応 */
+      width: 70%;  /* モバイル対応 */
     }
   }
 </style>
