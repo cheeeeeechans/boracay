@@ -11,15 +11,13 @@
 <script async src="https://app3.weatherwidget.org/js/?id=ww_918d49777123f"></script>
 
 <style>
-  #ww_c44914d4dc50c {
-    max-width: 440px;  /* 画面幅に合わせた最大幅 */
-    width: 100%;     /* 他の画面幅に合わせるため100%に調整 */
+  #ww_c44914d4dc50c, #ww_918d49777123f {
+    width: 100%;     /* 幅を画面幅に合わせる */
   }
 
   @media (max-width: 600px) {
     #ww_918d49777123f {
-    max-width: 440px;  /* 画面幅に合わせた最大幅 */
-    width: 100%;     /* 他の画面幅に合わせるため100%に調整 */
+      flex: 1;  /* 2つ目の幅をレスポンシブに */
     }
   }
 </style>
