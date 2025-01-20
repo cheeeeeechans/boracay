@@ -1,49 +1,42 @@
 <div class="weather-widgets">
-  <div class="weatherwidget-container">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/11d82122d09/aklan/" data-label_1="Boracay" data-label_2="Weather" data-icons="Climacons Animated" data-theme="original">Boracay Weather</a>
-  </div>
+  <!-- Boracay Weather -->
+  <iframe 
+    class="weather-iframe" 
+    src="https://forecast7.com/en/11d82122d09/aklan/" 
+    frameborder="0" 
+    scrolling="no" 
+    allowtransparency="true">
+  </iframe>
 
-  <div class="weatherwidget-container">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/14d61121d02/metro-manila/" data-label_1="Manila" data-label_2="Weather" data-icons="Climacons Animated" data-theme="original">Manila Weather</a>
-  </div>
+  <!-- Manila Weather -->
+  <iframe 
+    class="weather-iframe" 
+    src="https://forecast7.com/en/14d61121d02/metro-manila/" 
+    frameborder="0" 
+    scrolling="no" 
+    allowtransparency="true">
+  </iframe>
 </div>
-
-<script>
-  !function(d,s,id){
-    var js,fjs=d.getElementsByTagName(s)[0];
-    if(!d.getElementById(id)){
-      js=d.createElement(s);
-      js.id=id;
-      js.src='https://weatherwidget.io/js/widget.min.js';
-      fjs.parentNode.insertBefore(js,fjs);
-    }
-  }(document,'script','weatherwidget-io-js');
-</script>
 
 <style>
   .weather-widgets {
     width: 698px;
-    max-width: 100%; /* スマホ対応 */
+    max-width: 100%; /* レスポンシブ対応 */
     margin: 0 auto; /* 中央揃え */
     display: flex;
     flex-direction: column; /* 縦並び */
-    gap: 30px; /* ウィジェット間の間隔 */
+    gap: 10px; /* ウィジェット間の間隔 */
   }
 
-  .weatherwidget-container {
-    width: 100%;
-    overflow: hidden; /* 不要な部分を隠す */
-  }
-
-  .weatherwidget-io {
-    width: 100% !important;
-    height: 250px !important; /* 高さを固定 */
-    display: block;
+  .weather-iframe {
+    width: 100%; /* 親コンテナにフィット */
+    height: 250px; /* iframeの高さを調整 */
+    border: none; /* 枠線を削除 */
   }
 
   @media screen and (max-width: 768px) {
-    .weatherwidget-io {
-      height: 200px !important; /* モバイルでの高さ調整 */
+    .weather-iframe {
+      height: 200px; /* スマホ用に高さを調整 */
     }
   }
 </style>
