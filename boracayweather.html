@@ -1,30 +1,20 @@
-<div class="weather-widget-container">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/14d61121d02/metro-manila/" data-label_1="Manila" data-label_2="CURRENT WEATHER" data-icons="Climacons Animated" data-theme="pure">Manila CURRENT WEATHER</a>
-    <a class="weatherwidget-io" href="https://forecast7.com/en/14d61121d02/metro-manila/" data-label_1="Manila" data-label_2="7 DAY FORECAST" data-icons="Climacons Animated" data-theme="pure">Manila 7 DAY FORECAST</a>
+<div style="width: 400px;">
+  <a class="weatherwidget-io" 
+     href="https://forecast7.com/en/14d61121d02/metro-manila/" 
+     data-label_1="Manila" 
+     data-label_2="WEATHER" 
+     data-icons="Climacons Animated" 
+     data-theme="pure" 
+     style="width: 100%;">Manila WEATHER</a>
 </div>
-
 <script>
 !function(d,s,id){
-    var js,fjs=d.getElementsByTagName(s)[0];
-    if(!d.getElementById(id)){
-        js=d.createElement(s);
-        js.id=id;
-        js.src='https://weatherwidget.io/js/widget.min.js';
-        fjs.parentNode.insertBefore(js,fjs);
-    }
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);
+    js.id=id;
+    js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);
+  }
 }(document,'script','weatherwidget-io-js');
 </script>
-
-<style>
-/* 親コンテナにflexboxを使用して2段構成に */
-.weather-widget-container {
-    display: flex;
-    flex-direction: column; /* 2段構成：縦に並べる */
-    gap: 20px; /* 2つのウィジェット間の隙間 */
-}
-
-/* 幅を100%に設定して、各ウィジェットが親要素の幅いっぱいに表示されるように */
-.weatherwidget-io {
-    width: 100%;
-}
-</style>
